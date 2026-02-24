@@ -8,7 +8,6 @@ pipeline {
                 bat 'javac Calculator.java'
             }
         }
-
         stage('Run') {
             steps {
                 bat 'java CalculatorMain'
