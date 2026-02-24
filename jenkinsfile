@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compile') {
+            steps {
+                bat 'javac CalculatorMain.java'
+                bat 'javac Calculator.java'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                bat 'java CalculatorMain'
+            }
+        }
+    }
+}
